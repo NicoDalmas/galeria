@@ -13,7 +13,7 @@ function validar($file){
 if (validar($_FILES)) {
 	$path = 'img/';
 	$file = $path.basename($_FILES['user-file']['name']);
-	if(move_uploaded_file($_FILES['user-file']['tmp_name'], $file)){
+	if(move_uploaded_file($_FILES['user-file']['tmp_name'], $file)) {
 		//header('location: index.php');
 		echo "Funciona wachin";
 	}
