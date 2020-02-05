@@ -25,7 +25,7 @@
 		<div class="col-md-5 col-md-offset-3">
 		<div class="page-header text-center">
 		  <h1>Galería de imágenes <small>con PHP</small></h1>
-		  <h2><small>Proyecto de los 3 Mosqueteros</small></h2>
+		  
 		</div>
 	</div>
 </div>		
