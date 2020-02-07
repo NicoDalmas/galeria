@@ -1,15 +1,10 @@
 <?php
-
 	if (isset($_GET['par'])) {
 		if(file_exists("img/$_GET[par]")){
 		unlink("img/$_GET[par]");
 		}
 	}
-
 ?>
-
-
-
 
 <!DOCTYPE html>
 <html>
@@ -25,27 +20,27 @@
 		<div class="col-md-5 col-md-offset-3">
 		<div class="page-header text-center">
 		  <h1>Galería de imágenes <small>con PHP</small></h1>
-		  <h2><small>Proyecto de los 3 Mosqueteros company</small></h2>
+		  <h2><small>Proyecto de los 3 Mosqueteros</small></h2>
 		</div>
 	</div>
 </div>		
 		
-		<div class=row>
-		<div class="col-md-5 col-md-offset-3">
+<div class=row>
+	<div class="col-md-5 col-md-offset-3">
 		<form enctype="multipart/form-data" method="post" action="upload.php" class="form-group">
-					<div class="form-group">
-						<p>Elige un archivo
-						<input type="file" name="user-file"></p>
-							<div class="helper-text">Elige una imágen jpg (máximo 600kb)
-							</div>
-						<button type="submit" class="btn btn-primary">Cargar</button>
-					</div>
+			<div class="form-group">
+				<p>Elige un archivo
+				<input type="file" name="user-file"></p>
+				<div class="helper-text">Elige una imágen jpg (máximo 600kb)</div>
+				<button type="submit" class="btn btn-primary">Cargar</button>
+			</div>
 		</form>
-		</div>
-		</div>
-		<hr>
-		<div class="col-md-12">
-		<?php
+	</div>
+</div>
+<hr>
+<div class="col-md-12">
+		
+	<?php
 		$patron='%\.(gif|jpe?g|png)$%i';
 		$imgs = dir('img');
 		while (($img = $imgs->read()) !== false) {
@@ -54,8 +49,9 @@
 				echo "<a href='index.php?par=$img'> <img src='img/$img' class='img-thumbnail'></a>"; 
 			}
 		}
+	?>
 		
-		?>
-		</div>
+</div>
+
 </body>
 </html>
