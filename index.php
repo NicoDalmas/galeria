@@ -33,6 +33,13 @@
 				<input type="file" name="user-file"></p>
 				<div class="helper-text">Elige una imágen jpg (máximo 600kb)</div>
 				<button type="submit" class="btn btn-primary">Cargar</button>
+				<div class="helper-text">
+					<small>
+						<?php 
+						isset($_GET['msj']) ? print $_GET['msj'] : print '';
+						 ?>
+					 </small>
+				</div>
 			</div>
 		</form>
 	</div>

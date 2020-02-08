@@ -13,13 +13,12 @@ function validar($file){
 if (validar($_FILES)) {
 	$path = 'img/';
 	$file = $path.basename($_FILES['user-file']['name']);
-	
+
 	if (move_uploaded_file($_FILES['user-file']['tmp_name'], $file)) {
-		//header('location: index.php');
-		echo "Funciona wachin";
+		header('location: index.php?msj=La operación se ejecutó correctamente');
 	}
 }else{
-	echo "Error no anda";
+	header('location: index.php?msj=Error, no cumple con las condiciones');
 }
 
 
